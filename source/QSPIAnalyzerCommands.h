@@ -1,4 +1,5 @@
 #include <LogicPublicTypes.h>
+#include <string>
 
 struct CommandAttr {
 	bool AcceptsAddr;
@@ -7,7 +8,8 @@ struct CommandAttr {
 	bool isWrite;
 	int AddressLineMask;
 	int DataLineMask;
-	char CommandName[128];
+	//char CommandName[128];
+	std::string CommandName;
 };
 
 const CommandAttr& GetQSPICommandAttr(U64 id);
